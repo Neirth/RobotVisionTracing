@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch ROS1 System",
+      "type": "python",
+      "request": "launch",
+      "program": "/opt/ros/melodic/bin/rosrun",
+      "args": [
+        "class_project",         // Reemplaza con el nombre de tu paquete
+        "${workspaceFolder}/src/packages/node_controller.py"          // Reemplaza con el nombre de tu nodo
+      ],
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/devel/lib/python2.7/dist-packages:${workspaceFolder}/build/lib/python2.7/dist-packages:${PYTHONPATH}",
+        "ROS_MASTER_URI": "http://localhost:11311",
+        "ROS_PACKAGE_PATH": "${workspaceFolder}/src:${ROS_PACKAGE_PATH}"
+      },
+      "cwd": "${workspaceFolder}",
+      "pythonPath": "/usr/bin/python2.7"
+    }
+  ]
+}

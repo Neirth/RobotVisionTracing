@@ -1,0 +1,28 @@
+{
+  "name": "ROS2 DevContainer",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.formatOnSave": true
+  },
+  "extensions": [
+    "ms-iot.vscode-ros",         // Extensión para ROS
+    "ms-python.python",          // Extensión de Python
+    "ms-vscode.cmake-tools",     // Extensión para CMake
+    "twxs.cmake",                // Syntax highlighting para CMake
+    "ms-azuretools.vscode-docker", // Extensión para Docker
+    "ms-python.debugpy",
+  ],
+  "remoteEnv": {
+    "ROS_DOMAIN_ID": "0"         // Configuración del dominio de ROS
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "/bin/bash -c 'source /opt/ros/melodic/setup.bash && catkin_make'",
+  "workspaceFolder": "/workspaces",
+  "runArgs": [
+    "--privileged"
+  ]
+}
