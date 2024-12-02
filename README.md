@@ -84,8 +84,7 @@ roslaunch task_controller system_controller.launch
         │   │   └── lidar_processing.py     # LiDAR processing module
         │   └── utils                       # Common utility modules
         │       ├── conversions.py          # Unit conversion functions
-        │       ├── geometry_utils.py       # Geometry utility functions
-        │       └── logging.py              # Custom logging module
+        │       └── geometry_utils.py       # Geometry utility functions
         ├── launch                          # ROS launch files
         │   └── system_controller.launch    # System controller launch file
         ├── package.xml                     # ROS package configuration

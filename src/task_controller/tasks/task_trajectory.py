@@ -20,6 +20,8 @@ class TaskTrajectory:
                 self.start_time = time()
                 self.stage += 1
 
+                rospy.loginfo("El robot ha avanzado 800 mm")
+
         elif self.stage == 1:
             # Girar 90 grados
             self.motion_control.move(angular=0.5)
@@ -28,6 +30,12 @@ class TaskTrajectory:
                 self.start_time = time()
                 self.stage += 1
 
-        else:
+                rospy.loginfo("El robot ha girado 90 grados")
+        
+        elif self.stage == 2:
             self.motion_control.stop()
-            rospy.loginfo("Trayectoria completada")
+            self.stage += 1
+            rospy.loginfo("El robot se ha parado")
+    
+        else:
+            rospy.signal_shutdown("El robot ha completado la trayectoria, se puede detener el nodo.")
