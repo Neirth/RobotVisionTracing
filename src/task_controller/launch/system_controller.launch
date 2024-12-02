@@ -1,9 +1,10 @@
 <launch>
-    <node pkg="task_controller"
-          type="node_controller.py"
-          name="node_controller"
-          output="screen"
-          required="true"
+    <node 
+        pkg="task_controller"
+        type="node_controller.py"
+        name="node_controller"
+        output="screen"
+        required="true"
     >
         <!-- Add debug level -->
         <param name="debug" value="true"/>
