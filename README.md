@@ -124,6 +124,7 @@ catkin_make clean
 catkin_make
 ````
 
+As a note, you need to change the ROS_IP to your own IP address in .bashrc file.
 
 # Contributing
 

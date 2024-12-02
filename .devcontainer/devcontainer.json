@@ -23,6 +23,7 @@
   "postCreateCommand": "/bin/bash -c 'source /opt/ros/melodic/setup.bash && catkin_make'",
   "workspaceFolder": "/workspaces",
   "runArgs": [
-    "--privileged"
+    "--privileged",
+    "--network=host"
   ]
 }

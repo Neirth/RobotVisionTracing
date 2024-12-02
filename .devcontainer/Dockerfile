@@ -16,6 +16,7 @@ RUN apt-get update && apt-get upgrade -yqq && apt-get install -y \
     cmake \
     git \
     python3-pip \
+    openssh-client \
     && rm -rf /var/lib/apt/lists/*
 
 # Instala extensiones para ROS2
