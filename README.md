@@ -1,62 +1,67 @@
-ROS 1 Project with VS Code DevContainer
+# ROS 1 Project with VS Code DevContainer
 
 Welcome to the ROS 1 Project! This repository is configured to work seamlessly with VS Code using a DevContainer. It includes the necessary setup to quickly build, source, and run the project with minimal effort.
 
-Prerequisites
+# Prerequisites
 
-	1.	Docker: Ensure you have Docker installed and running on your machine.
-	2.	Visual Studio Code:
-	•	Install VS Code.
-	•	Install the Dev Containers extension (ms-vscode-remote.remote-containers).
-	3.	ROS 1 Workspace: This project assumes a ROS 1 workspace structure.
+1.	Docker: Ensure you have Docker installed and running on your machine.
+2.	Visual Studio Code:
 
-Features
+    * Install VS Code.
 
-	•	Pre-configured DevContainer for ROS 1 development.
-	•	Environment variables (e.g., ROS_MASTER_URI) are pre-set.
-	•	Minimal setup required—just build, source, and run!
+    * Install the Dev Containers extension (ms-vscode-remote.remote-containers).
 
-Getting Started
+3.	ROS 1 Workspace: This project assumes a ROS 1 workspace structure.
 
-1. Open the Repository in VS Code
+# Features
 
-	1.	Clone this repository:
+* Pre-configured DevContainer for ROS 1 development.
 
-git clone <repository_url>
-cd <repository_folder>
+* Environment variables (e.g., ROS_MASTER_URI) are pre-set.
 
+* Minimal setup required—just build, source, and run!
 
-	2.	Open the folder in VS Code:
+## Getting Started
 
-code .
+1. Clone the Repository
 
 
-	3.	Reopen the project in the DevContainer environment. VS Code will prompt you to do this automatically if the DevContainer configuration is detected.
+2.	Open the folder in VS Code
 
-2. Build and Run the Project
+
+3.	Reopen the project in the DevContainer environment. VS Code will prompt you to do this automatically if the DevContainer configuration is detected.
+
+## 2. Build and Run the Project
 
 Inside the DevContainer terminal, execute the following commands:
-	1.	Build the project:
 
+1.	Build the project:
+
+```bash
 catkin_make
+```
 
+2.	Source the workspace:
 
-	2.	Source the workspace:
-
+```bash
 source devel/local_setup.bash
+```
 
+3.	Launch the system controller:
 
-	3.	Launch the system controller:
-
+```bash
 rosrun task_controller system_controller.launch
+````
 
-Environment Configuration
+# Environment Configuration
 
-	•	ROS_MASTER_URI: Pre-configured in the DevContainer. Ensure your ROS network configuration matches your requirements.
-	•	Workspace Directory: The default workspace is located at /workspaces/<repository_name>.
+* ROS_MASTER_URI: Pre-configured in the DevContainer. Ensure your ROS network configuration matches your requirements.
 
-Project Structure
+* Workspace Directory: The default workspace is located at /workspaces/<repository_name>.
 
+# Project Structure
+
+```
 .
 ├── requirements.txt                        # Python 2.7 dependencies
 └── src
@@ -92,33 +97,39 @@ Project Structure
             ├── task_navigation.py          # Task 3: navigation module
             ├── task_object_handling.py     # Task 5: object handling module
             └── task_trajectory.py          # Task 1: trajectory module
+````
 
-Debugging and Development
+# Debugging and Development
 
 Use VS Code’s built-in tools for:
-	•	ROS debugging: Leverage breakpoints, variable watches, and integrated terminals.
-	•	Linting: Check ROS code quality with supported extensions.
+*	ROS debugging: Leverage breakpoints, variable watches, and integrated terminals.
 
-Troubleshooting
+*	Linting: Check ROS code quality with supported extensions.
+
+# Troubleshooting
 
 If you encounter any issues:
-	•	Verify that Docker is running.
-	•	Ensure the DevContainer builds successfully.
-	•	Confirm the ROS environment variables are correctly set by running:
+* Verify that Docker is running.
+* Ensure the DevContainer builds successfully.
+* Confirm the ROS environment variables are correctly set by running:
 
+```
 printenv | grep ROS
+```
 
+* If issues persist, rebuild the workspace:
 
-	•	If issues persist, rebuild the workspace:
-
+```
 catkin_make clean
 catkin_make
+````
 
-Contributing
+
+# Contributing
 
 Contributions are welcome! Feel free to submit issues or pull requests to improve the project.
 
-License
+# License
 
 This project is licensed under the MIT License.
 
