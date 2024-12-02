@@ -28,8 +28,6 @@ class TaskTrajectory:
                 self.start_time = time()
                 self.stage += 1
 
-        # Repite para las demás etapas del rectángulo
-
         else:
             self.motion_control.stop()
             rospy.loginfo("Trayectoria completada")

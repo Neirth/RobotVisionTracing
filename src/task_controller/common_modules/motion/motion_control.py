@@ -2,7 +2,7 @@
 
 from geometry_msgs.msg import Twist
 
-class MotionControl:
+class MotionControl(object):
     def __init__(self, cmd_vel_pub):
         self.cmd_vel_pub = cmd_vel_pub
 
