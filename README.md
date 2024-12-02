@@ -44,16 +44,17 @@ catkin_make
 2.	Source the workspace:
 
 ```bash
-source devel/local_setup.bash
+source /opt/ros/melodic/setup.bash
+source devel/setup.bash
 ```
 
 3.	Launch the system controller:
 
 ```bash
-rosrun task_controller system_controller.launch
+roslaunch task_controller system_controller.launch
 ````
 
-# Environment Configuration
+#Environment Configuration
 
 * ROS_MASTER_URI: Pre-configured in the DevContainer. Ensure your ROS network configuration matches your requirements.
 
