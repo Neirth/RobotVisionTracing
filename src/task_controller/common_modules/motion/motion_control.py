@@ -14,3 +14,9 @@ class MotionControl(object):
 
     def stop(self):
         self.move(0.0, 0.0)
+
+    def adjust_direction(self, error, linear_speed=0.2, kp=0.01):
+        # Calcular la velocidad angular basada en el error y una constante proporcional
+        angular_speed = kp * error
+        # Mover el robot con la velocidad lineal y angular calculadas
+        self.move(linear=linear_speed, angular=angular_speed)

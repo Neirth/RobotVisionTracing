@@ -1,6 +1,6 @@
 # ROS 1 Project with VS Code DevContainer
 
-Welcome to the ROS 1 Project! This repository is configured to work seamlessly with VS Code using a DevContainer. It includes the necessary setup to quickly build, source, and run the project with minimal effort.
+Welcome to the ROS 1 (Melodic) Project! This repository is configured to work seamlessly with VS Code using a DevContainer. It includes the necessary setup to quickly build, source, and run the project with minimal effort.
 
 # Prerequisites
 
@@ -96,7 +96,7 @@ roslaunch task_controller system_controller.launch
             ├── task_line_following.py      # Task 2: line following module
             ├── task_navigation.py          # Task 3: navigation module
             ├── task_object_handling.py     # Task 5: object handling module
-            └── task_trajectory.py          # Task 1: trajectory module
+            └── task_trajectory.py          # Task 1: trajectory module (Hecho, falta calibrar el giro)
 ````
 
 # Debugging and Development

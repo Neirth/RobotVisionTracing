@@ -1,4 +1,4 @@
-# Usa una imagen base oficial de ROS2 Humble
+# Usa una imagen base oficial de ROS2 Melodic
 FROM --platform=linux/amd64 osrf/ros:melodic-desktop
 
 # Configura el entorno
@@ -32,7 +32,9 @@ RUN source /opt/ros/melodic/setup.bash && \
     mkdir -p ~/catkin_ws/src && \ 
     cd ~/catkin_ws/src && \
     git clone -b ubuntu https://github.com/waveshare/jetbot_pro.git && \
-    cd ~/catkin_ws && catkin_make && source ~/catkin_ws/devel/setup.bash 
+    cd ~/catkin_ws && catkin_make && source ~/catkin_ws/devel/setup.bash
+
+# Configura el entorno
 RUN echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 RUN echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 RUN echo "export ROS_MASTER_URI=http://192.168.111.234:11311" >> ~/.bashrc
